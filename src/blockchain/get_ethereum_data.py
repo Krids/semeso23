@@ -1,15 +1,11 @@
 
-from ast import Tuple
 import datetime
-from itertools import count
 import json
 import os
-import logging as log
 from typing import Dict, List
 
-from requests import HTTPError
 from tqdm import tqdm
-from web3 import Web3, contract
+from web3 import Web3
 from web3.exceptions import BlockNotFound
 
 from src.utils.project_paths import ABI_PATH
