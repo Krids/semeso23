@@ -3,19 +3,21 @@ from typing import Dict, List
 from src.features.feature_strategy import FeatureStrategy
 
 
-class RatioValueBlockStrategy(FeatureStrategy):
+class RecurringWalletTransactionsStrategy(FeatureStrategy):
 
     def execute(self, data: List[Dict]) -> List[Dict]:
         output_data = []
         
-        # Aggregate values for each block
-        block_values = defaultdict(int)
+        # Count the transaction occurrences between pairs
+        pair_count = defaultdict(int)
         for transaction in data:
-            block_values[transaction['blockNumber']] += transaction['value']
+            pair = (transaction['from'], transaction['to'])
+            pair_count[pair] += 1
         
         for transaction in data:
+            pair = (transaction['from'], transaction['to'])
             transaction_copy = transaction.copy()
-            transaction_copy['value_per_block'] = block_values[transaction['blockNumber']]
+            transaction_copy['recurring_transaction'] = pair_count[pair] > 1
             output_data.append(transaction_copy)
 
         return output_data

@@ -1,0 +1,73 @@
+.
+├── README.md
+├── backup.json
+├── data
+│   ├── processed
+│   │   └── transfer_data_processed_0.json
+│   └── raw
+│       ├── backup_transfer_timestamp.json
+│       ├── transfer_data_1.json
+│       └── transfer_data_2.json
+├── docs
+│   ├── abis
+│   │   └── illuvium.json
+│   ├── images
+│   ├── logs
+│   └── models
+├── estrutura.txt
+├── main.py
+├── notebook.ipynb
+├── requirements.txt
+├── src
+│   ├── __init__.py
+│   ├── blockchain
+│   │   ├── __init__.py
+│   │   └── get_ethereum_data.py
+│   ├── features
+│   │   ├── __init__.py
+│   │   ├── active_wallets_by_block_strategy.py
+│   │   ├── block_total_transfered_strategy.py
+│   │   ├── block_transactions_count_strategy.py
+│   │   ├── feature_strategy.py
+│   │   ├── high_value_transactions_strategy.py
+│   │   ├── high_volume_wallets_strategy.py
+│   │   ├── new_wallets_by_block_strategy.py
+│   │   ├── ratio_value_block_strategy.py
+│   │   ├── recorrent_wallet_transactions_strategy.py
+│   │   ├── transactions_distribuition_size_strategy.py
+│   │   └── value_concentration_strategy.py
+│   ├── modeling
+│   │   └── __init__.py
+│   ├── preprocessing
+│   │   ├── __init__.py
+│   │   └── illuvium_transactions_processing.py
+│   └── utils
+│       ├── __init__.py
+│       ├── json_handdler.py
+│       └── project_paths.py
+└── tests
+    ├── blockchain
+    │   ├── __init__.py
+    │   └── get_ethereum_data_test.py
+    ├── features
+    │   ├── __init__.py
+    │   ├── active_wallets_by_block_strategy_test.py
+    │   ├── block_total_transfered_strategy_test.py
+    │   ├── block_transactions_count_strategy_test.py
+    │   ├── high_value_transactions_strategy_test.py
+    │   ├── high_volume_wallets_strategy_test.py
+    │   ├── new_wallets_by_block_strategy_test.py
+    │   ├── ratio_value_block_strategy_test.py
+    │   ├── recurrent_wallet_transactions_strategy_test.py
+    │   ├── transactions_distribuition_size_strategy_test.py
+    │   └── value_concentration_strategy_test.py
+    ├── modeling
+    │   └── __init__.py
+    ├── preprocessing
+    │   ├── __init__.py
+    │   └── illuvium_transactions_processing_test.py
+    └── utils
+        ├── __init__.py
+        └── project_paths_test.py
+
+21 directories, 50 files
